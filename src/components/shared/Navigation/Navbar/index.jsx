@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ContentWrapper } from "Home/Styles";
+import { ContentWrapper } from "pages/Home/Styles";
 import { BrandLogo, MobileMenu, NavBar, NavMenu } from "./Styles";
 import { AppLogo } from "shared/utils/images";
 import data from "data";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AppNavBar from "components/shared/Navigation/Navbar";
-import { SectionHero } from "Home/Styles";
+import { SectionHero } from "pages/Home/Styles";
 
 const PageNotFound = () => {
   const [timer, setTimer] = useState(5);
