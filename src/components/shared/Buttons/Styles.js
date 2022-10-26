@@ -11,7 +11,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   transition: all 0.2s ease-out;
 
-  ${props =>
+  ${(props) =>
     props.primary &&
     css`
       background-color: ${color.accent};
@@ -22,11 +22,10 @@ export const StyledButton = styled.button`
 
   @media (max-width: 480px) {
     width: 100%;
-    padding-inline: 0;
     height: 48px;
   }
 
-  ${props =>
+  ${(props) =>
     !props.primary &&
     css`
         position: relative;
