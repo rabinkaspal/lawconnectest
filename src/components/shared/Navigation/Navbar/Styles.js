@@ -51,29 +51,39 @@ export const BrandLogo = styled.img`
 
 export const MobileMenu = styled.div`
   position: fixed;
-  top: ${props => (props.active ? "0px" : "-700px")};
+  top: ${(props) => (props.active ? "0px" : "-700px")};
   left: 10%;
   width: 80%;
   z-index: 10;
-  padding: 80px 30px 40px;
+  padding: 80px 20px 20px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   ${mixin.boxShadowDropdown}
   background-color: #013280;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: all 0.4s ease-out;
+  gap: 6px;
+  max-height: 400px;
+  overflow: scroll;
+  ${mixin.safariGapBottom(6)}
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
 
   div {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 5px;
+    align-items: flex-start;
+    ${mixin.safariGapBottom(5)}
 
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      & > :not(:last-child) {
-        margin-bottom: 12px;
-      }
+    @media (max-width: 480px) {
+      width: 100%;
+      align-items: center;
     }
   }
 
